@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetwork.Controller.HomeController">
+
+    <ImageView>
+        <image>
+            <Image url="@images/home.jpg"/>
+        </image>
+        <fitWidth>700</fitWidth> <!-- specificați lățimea dorită -->
+        <fitHeight>700</fitHeight> <!-- specificați înălțimea dorită -->
+    </ImageView>
+    <Label fx:id="welcomeMessage" layoutX="70.0" layoutY="10.0" prefHeight="55.0" prefWidth="333.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <font>
+         <Font size="27.0" />
+      </font></Label>
+
+    <TableView fx:id="friendsTable" layoutX="525.0" layoutY="115.0" prefHeight="515.0" prefWidth="243.0" styleClass="table" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="friendColumnFirstName" text="First Name" />
+            <TableColumn fx:id="friendColumnLastName" text="Last Name" />
+            <TableColumn fx:id="friendColumnEmail" text="Identifier" />
+        </columns>
+    </TableView>
+
+    <TableView fx:id="usersTable" layoutX="14.0" layoutY="115.0" prefHeight="515.0" prefWidth="230.0" styleClass="table" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="userColumnFirstName" prefWidth="74.79998779296875" text="First Name" />
+            <TableColumn fx:id="userColumnLastName" prefWidth="85.20001220703125" text="Last Name" />
+            <TableColumn fx:id="userEmail" prefWidth="68.80000915527344" text="Identifier" />
+        </columns>
+    </TableView>
+
+    <Label fx:id="messageToUser" layoutX="14.0" layoutY="630.0" prefHeight="28.0" prefWidth="210.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+   <Label layoutX="14.0" layoutY="85.0" prefHeight="30.0" prefWidth="270.0" text="Recommended friends:">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="525.0" layoutY="86.0" text="Your friends list:">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Label>
+   <Label layoutX="341.0" layoutY="14.0" onMouseEntered="#handleFresh" prefHeight="55.0" prefWidth="243.0" />
+   <VBox alignment="CENTER" layoutX="284.0" layoutY="168.0" prefHeight="363.0" prefWidth="186.0" spacing="10">
+      <children>
+           <Button fx:id="buttonSendFriendRequest" onAction="#handleSendFriendRequest" prefHeight="34.0" prefWidth="110.0" styleClass="buttons" text="Send request" textAlignment="CENTER" wrapText="true" />
+           <Button fx:id="buttonRequests" lineSpacing="2.0" onAction="#handleRequests" prefHeight="35.0" prefWidth="110.0" styleClass="buttons" text="Show all requests" />
+           <Button fx:id="buttonRemoveFriend" onAction="#handleRemoveFriend" prefHeight="36.0" prefWidth="110.0" styleClass="buttons" text="Delete friend" />
+           <Button fx:id="buttonMessage" onAction="#handleMessage" prefHeight="34.0" prefWidth="109.0" styleClass="buttons" text="Messages" />
+           <Button fx:id="buttonRefresh" alignment="CENTER" onAction="#handleRefresh" prefHeight="34.0" prefWidth="108.0" styleClass="buttons" text="Refresh" />
+      </children>
+   </VBox>
+    <Button fx:id="previousButton" layoutX="14.0" layoutY="672.0" onAction="#goToPreviousPage" prefHeight="26.0" prefWidth="86.0" text="Previous" />
+    <Button fx:id="nextButton" layoutX="137.0" layoutY="672.0" onAction="#goToNextPage" prefHeight="26.0" prefWidth="100.0" text="Next" />
+    <TextField fx:id="pageField" alignment="CENTER" layoutX="177.0" layoutY="644.0" prefHeight="26.0" prefWidth="46.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   <Label layoutX="14.0" layoutY="645.0" prefHeight="26.0" prefWidth="161.0" text="Number of users to display:">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+
+</AnchorPane>

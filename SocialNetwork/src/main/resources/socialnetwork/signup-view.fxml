@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.socialnetwork.Controller.SignUpController"
+            prefHeight="400.0" prefWidth="700.0">
+
+    <GridPane>
+        <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+
+        <Text id="loginLabel" text="Sign up" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" styleClass="signInLabel" visible="false"/>
+
+        <Label text="First name:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="signInLabel"/>
+        <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="textFields"/>
+
+        <Label text="Last name:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="signInLabel"/>
+        <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="textFields"/>
+
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="signInLabel"/>
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="textFields"/>
+
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="signInLabel"/>
+        <PasswordField fx:id="passwordField1" GridPane.columnIndex="1" GridPane.rowIndex="4" styleClass="textFields"/>
+
+        <Label text="Confirm password:" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="signInLabel"/>
+        <PasswordField fx:id="passwordField2" GridPane.columnIndex="1" GridPane.rowIndex="5" styleClass="textFields"/>
+
+        <Label fx:id="messageToUser" GridPane.columnIndex="0" GridPane.rowIndex="6" styleClass="signInLabel"/>
+
+        <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Button id="signInButton" onAction="#handleSubmitButtonAction"   text="Sign Up" />
+        </HBox>
+    </GridPane>
+
+    <!-- Imaginea din dreapta -->
+    <ImageView>
+        <image>
+            <Image url="@images/signup.png"/> <!-- Specificați calea către imaginea dorită -->
+        </image>
+        <fitWidth>200</fitWidth> <!-- Lățimea dorită a imaginii -->
+        <fitHeight>200</fitHeight> <!-- Înălțimea dorită a imaginii -->
+        <layoutX>500</layoutX> <!-- Ajustați poziția orizontală a imaginii -->
+        <layoutY>50</layoutY> <!-- Ajustați poziția verticală a imaginii -->
+    </ImageView>
+
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="728.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetwork.Controller.MessageController">
+    <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="14.0" layoutY="25.0">
+
+    </ImageView>
+    <GridPane alignment="center" hgap="10" layoutX="12.0" layoutY="18.0" prefHeight="705.0" prefWidth="548.0" vgap="10">
+
+        <TableView fx:id="friendsTable" prefHeight="502.0" prefWidth="249.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="friendColumnFirstName" text="First Name" />
+                <TableColumn fx:id="friendColumnLastName" text="Last Name" />
+            </columns>
+        </TableView>
+
+        <ListView fx:id="messageList" prefHeight="346.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <TextField fx:id="messageField" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label fx:id="errorMessage" prefHeight="18.0" prefWidth="211.0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Button onAction="#handleSendToAll" text="Send" GridPane.columnIndex="2" GridPane.rowIndex="2"> </Button>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+     <Label id="labelForTable" alignment="CENTER" layoutX="25.0" layoutY="76.0" prefHeight="41.0" prefWidth="127.0" styleClass="labelRequest" text="Friends list:" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="30.0">
+      <font>
+         <Font name="System Bold" size="19.0" />
+      </font>
+   </Label>
+     <Button layoutX="568.0" layoutY="593.0" onAction="#handleReply" text="Reply"> </Button>
+</AnchorPane>

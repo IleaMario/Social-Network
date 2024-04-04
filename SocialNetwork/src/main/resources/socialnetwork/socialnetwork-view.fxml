@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="1209.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetwork.Controller.SocialNetworkController">
+
+    <children>
+      <TableView fx:id="usersTable" editable="true" layoutX="91.0" layoutY="50.0" prefHeight="331.0" prefWidth="596.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="76.79998779296875" text="ID" />
+            <TableColumn fx:id="firstNameColumn" minWidth="0.0" prefWidth="246.6000213623047" text="First Name" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="269.4000244140625" text="Last Name" />
+        </columns>
+      </TableView>
+      <ToolBar layoutY="432.0" prefHeight="40.0" prefWidth="1209.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#handleAddUser" text="Add" />
+            <Button mnemonicParsing="false" onAction="#handleUpdateUser" text="Update" />
+            <Button mnemonicParsing="false" onAction="#handleDeleteUser" text="Delete" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
