@@ -39,9 +39,9 @@ public class SocialNetworkApplication extends Application {
     public void start(Stage stage) throws IOException {
 
 
-        String url = "jdbc:postgresql://localhost:5432/SocialNet";
-        String username = "postgres";
-        String password = "2003Mario";
+        String url = "***";
+        String username = "***";
+        String password = "***";
 
         validatorUser=ValidatorHelper::ValidUserName;
         repoUser = new UserDBRepository(url, username, password,validatorUser);
